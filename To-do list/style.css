@@ -1,0 +1,338 @@
+/*monstrat*/
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Montserrat:wght@100&family=Poppins:ital,wght@1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*bogart*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Martel+Sans:wght@600&family=Montserrat:wght@100&family=Poppins:ital,wght@1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primaryColor:white;
+    --backgroundColor:#F6F6F6;
+    --textColor:black;
+    
+
+}
+body{
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+}
+.cont img{
+height: 100vh;
+width: 100%;
+
+}
+
+
+.project{
+    display: flex;
+}
+
+.project p{
+    position: absolute;
+    color: var(--textColor);
+    margin: 39px;
+    top: 0;
+    left: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size:large;
+    font-weight: bolder;
+    opacity: 1;
+    animation: fadeDown 2s ease-in-out 1; /* Apply the animation */
+}
+.Head{
+    display: flex;
+}
+.Head h1{
+    position: absolute;
+    text-align: center;
+    color: var(--textColor);
+    font-size: 5rem;
+    font-family: 'Arvo', serif;
+    font-weight: lighter;
+    top: 20%;
+    left: 17%;
+    width: 20%;
+    opacity: 1;
+    animation: fadeDown 2s ease-in-out 1; /* Apply the animation */
+}
+
+@keyframes fadeDown {
+from {
+    opacity: 0;
+    transform: translateY(-20px); /* Adjust the distance you want to move down */
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.adv ul{
+    display: flex;
+    position: absolute;
+    top: 70%;
+    list-style-type: none;
+    opacity: 1;
+    animation: butt 2s ease-in-out 1; /* Apply the animation */
+}
+@keyframes butt {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adv ul button{
+    background-color: transparent;
+    border: none;
+}
+.adv ul li{
+    padding: 0px 70px;
+}
+.adv ul li img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+.add img{
+    background-color: orange;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+.hover-button {
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    bottom: 80px;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.hover-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.view img{
+    background-color: rgb(119, 0, 255);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+.rem img{
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: var(--textColor);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 80px;
+}
+.email{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+.line{
+    background-color: grey;
+    height: 2px;
+    width: 70%;
+}
+
+
+.themer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: purple;
+    height: 20px;
+    width: 60px;
+    border-radius: 50px;
+    padding: 2px;
+    cursor: pointer;
+}
+.themer::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    
+}
+.night input{
+    display: none;
+    height: 20px;
+    position: absolute;
+    margin: 4px;
+    padding: 10px;
+    z-index: 10;
+
+}
+.night input:checked+ .themer::after{
+    transform: translateX(37px);
+}
+
+@media screen and (max-width:1148px){
+    .Head h1{
+        font-size: 4rem;
+    }
+    .adv ul{
+        top: 63%;
+        left: -4%;
+    }
+    .footer{
+        bottom: 5%;
+    }
+    .footer p{
+        padding: 0px 47px;
+    }
+}
+@media screen and (max-width:1023px){
+    .project p{
+        left: 18%;
+    }
+    .adv ul{
+        top: 64%;
+        left:-5%;
+    }
+    .footer p{
+        padding: 0px 47px;
+    }
+}
+@media screen and (max-width:917px){
+    .Head h1{
+        font-size: 3rem;
+        top: 27%;
+    }
+    .project p{
+        left: 18%;
+        top: 3%;
+    }
+    .adv ul{
+        display: block;
+        top: 59%;
+        left: -6%;
+    }
+    .adv ul li{
+        padding: 49px;
+    }
+    .footer p{
+        padding: 0px 40px;
+    }
+    .adv ul img{
+        height: 43px;
+        width: 43px;
+    }
+    .footer{
+    bottom: 10%;
+    }
+}
+@media screen and (max-width:412px){
+    .back img{
+        display: none;
+    }
+    .Head h1{
+        font-size: 67px;
+        top: 17%;
+        left: 25%;
+        width: 48%;
+    }
+    .project p{
+        left: 21%;
+        top: 3%;
+        font-size: 31px;
+    }
+    .adv ul{
+        display: block;
+        top: 34%;
+        left: 11.5%;
+    }
+    .adv ul li{
+        margin: 46px;
+    }
+    .footer p{
+        width: 145px;
+        font-size: 16px;
+        padding: 0px 17px;
+    }
+    
+    .adv ul img{
+        height: 43px;
+        width: 43px;
+    }
+    .footer{
+    bottom: 10%;
+    }
+}
+@media screen and (max-width:540px){
+    .back img{
+        display: none;
+    }
+    .Head h1{
+        font-size: 67px;
+        top: 19%;
+        left: 25%;
+        width: 48%;
+    }
+    .project p{
+        left: 27%;
+        top: 3%;
+        font-size: 31px;
+    }
+    .adv ul{
+        display: block;
+        top: 47%;
+        left: 2.5%;
+    }
+    .adv ul li{
+        padding: 49px;
+    }
+    .footer p{
+        width: 173px;
+        font-size: 19px;
+        padding: 0px 32px;
+    }
+    
+    .adv ul img{
+        height: 43px;
+        width: 43px;
+    }
+    .footer{
+    bottom: 10%;
+    }
+}
